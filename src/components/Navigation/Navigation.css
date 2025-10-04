@@ -1,0 +1,12 @@
+.navigation{
+    padding: 1.5vw 7.5vw;
+}
+.navigation, .navigation_list, .navigation_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.navigation_icons, .navigation_list{
+    gap: 1.5rem;
+}

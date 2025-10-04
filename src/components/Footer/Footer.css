@@ -1,0 +1,24 @@
+:root{
+    --footer_bg:rgba(64, 64, 64, 1);
+    --footer_color:rgba(255, 255, 255, 1);
+}
+.footer_main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--footer_bg);
+    color: var(--footer_color);
+    /*height:3.5vw;*/
+    height: 400px;
+}
+.left{
+    background-color: #748C70;
+}
+
+.right{
+    width: 40%;
+    background-color: black;
+}
+.right_column{
+    margin: 20px;
+}
