@@ -40,8 +40,6 @@ export default function Footer(){
                     </div>
 
                 </div>
-
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, cum deserunt exercitationem expedita iusto laudantium officiis tempore totam! Enim esse ipsam laudantium reprehenderit suscipit velit voluptas. Asperiores dignissimos eius maiores, quia suscipit veniam!</span>
             </div>
         </>
     )
