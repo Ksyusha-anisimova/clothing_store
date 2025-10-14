@@ -1,4 +1,5 @@
-.modweek{
+.modiweek_gallery{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    flex-direction: row;
 }
