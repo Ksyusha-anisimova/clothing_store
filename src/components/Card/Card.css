@@ -1,7 +1,11 @@
 .card{
     position: relative;
     width: 27vw;
-    height: 37.5vw;
+}
+.card_img{
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
 }
 .card_button {
     position: absolute;

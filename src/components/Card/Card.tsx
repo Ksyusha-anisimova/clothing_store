@@ -8,17 +8,33 @@ export type CardProps={
     description?:string;
     price?:string;
     colors?: string[];
+    ratio?: string;
+    fit?: 'contain' | 'cover';
 }
 
-export default function Card({img,favorite,title,description,colors =[],price}:CardProps){
+export default function Card({
+                                 img,
+                                 favorite,
+                                 title,
+                                 description,
+                                 colors =[],
+                                 price,
+                                 ratio='4 / 5',
+                                 fit='contain',
+
+}:CardProps){
     return (
         <>
             <div className="card">
                 <div className="card_button">
                     <img src={favorite} alt=""/>
                 </div>
-                <div className="card_img">
-                    <img src={img} alt=""/>
+                <div className="card_img"  style={{
+                    backgroundImage: `url(${img})`,
+                    aspectRatio: ratio,
+                    backgroundSize: fit,
+                }}>
+                    {/*<img src={img} alt=""/>*/}
                 </div>
                 <div className="card_title">
                     <span>{title}</span>
