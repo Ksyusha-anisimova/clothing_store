@@ -25,13 +25,13 @@ export default function Card({
 }:CardProps){
     return (
         <>
-            <div className="card">
+            <div className="card" style={{ aspectRatio: ratio }}>
                 <div className="card_button">
                     <img src={favorite} alt=""/>
                 </div>
                 <div className="card_img"  style={{
                     backgroundImage: `url(${img})`,
-                    aspectRatio: ratio,
+                    // aspectRatio: ratio,
                     backgroundSize: fit,
                 }}>
                     {/*<img src={img} alt=""/>*/}
