@@ -1,5 +1,6 @@
 import React from 'react';
 import Card, {CardProps} from "../Card/Card";
+import './Follow.css';
 
 type followProps={
     title:string;
