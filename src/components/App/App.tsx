@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
-import '../../../public/index.css';
+import '../../style/index.css';
 import Navigation from "../Navigation/Navigation";
 import Hero from '../Hero/Hero';
 import BestSellers from "../BestSellers/BestSellers";
