@@ -20,7 +20,7 @@ export default function Footer(){
             <div className="footer_main">
                 <div className="left">
                     <span className="left_title">Join our club, get 15% off for your Birthday</span>
-                    <input type="Email" className="left_input"/>
+                    <input type="Email" className="left_input" placeholder="Enter Your Email Address"/>
 
                     <span className="left_frame">By Submittng your email, you agree to receive advertising emails from Modimal.</span>
                 </div>

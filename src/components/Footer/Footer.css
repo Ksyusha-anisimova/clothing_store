@@ -9,11 +9,45 @@
     background-color: var(--footer_bg);
     color: var(--footer_color);
     height: 400px;
+    padding: 52px 108px;
+    box-sizing: border-box;
+    gap:104px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+.left_input{
+    background-color: var(--footer_bg);
+    height: 40px;
+    color: var(--footer_color);
 }
 
 .right{
-    width: 40%;
+    width: 70%;
+    font-size: 12px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
 }
 .right_column{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     margin: 20px;
+}
+.right_text_box{
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    list-style-type: none;
+
+}
+.right_title{
+    /*margin-bottom:24px;*/
+}
+li{
+    /*gap:8px;*/
+    margin-bottom: 8px;
 }
