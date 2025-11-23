@@ -26,7 +26,7 @@ export default function Follow({title}:followProps){
 
                 <div className="follow_gallery">
                     {items.map((item,index)=>(
-                        <Card key={index} {...item}/>
+                        <Card key={index} {...item} fit='cover'/>
                     ))}
                 </div>
             </div>

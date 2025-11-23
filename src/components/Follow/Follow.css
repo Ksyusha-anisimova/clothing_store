@@ -1,11 +1,12 @@
 .follow{
-    margin: 0 108px;
+    margin: 88px 108px 48px;
 }
 .follow_gallery{
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows:repeat(12,1fr);
-    gap: 24px;
+    grid-template-rows:repeat(9,1fr);
+    margin-top: 24px;
+    /*gap: 24px;*/
 }
 .follow_gallery > .card:nth-child(1){
     grid-column: 1/7;

@@ -13,11 +13,11 @@ export default function App(){
         <>
             <Header/>
             <Navigation/>
-            <Hero  img="/images/hero.png"/>
+            <Hero  img="/images/hero.png" button='New In' title='Elegance in simplicity, Earth’s harmony'/>
             <BestSellers title="Best Sellers" />
             <Collection title="Collection"/>
             <Modiweek title="Modiweek"/>
-            <Hero  img="/images/cotton.jpg"/>
+            <Hero  img="/images/cotton.jpg" button='Sustainability' title="Stylish sustainability in clothing promotes eco-friendly choices for a greater future"/>
             <Follow title="Follow us @modimal"/>
             <Footer/>
         </>
