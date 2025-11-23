@@ -1,0 +1,7 @@
+.cards_gallery{
+    gap:24px;
+    margin-top: 24px;
+}
+.card{
+    background-position: top;
+}

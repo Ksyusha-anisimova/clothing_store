@@ -26,7 +26,7 @@ export default function Collection({title}:CollectionProps){
 
                 <div className="collection_gallery">
                     {items.map((item,i)=>(
-                        <Card key={i} {...item}/>
+                        <Card key={i} {...item} fit='cover'/>
                     ))}
 
                 </div>
