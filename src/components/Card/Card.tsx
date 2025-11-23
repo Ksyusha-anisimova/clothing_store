@@ -25,36 +25,44 @@ export default function Card({
 }:CardProps){
     return (
         <>
+
             <div className="card" style={{
                 aspectRatio: ratio,
                 backgroundImage: `url(${img})`,
-                backgroundSize: fit, }}>
+                backgroundSize: fit,
+            }}>
                 <div className="card_button">
                     <img src={favorite} alt=""/>
                 </div>
-                {/*<div className="card_img"  style={{*/}
-                {/*   // backgroundImage: `url(${img})`,*/}
-                {/*    // aspectRatio: ratio,*/}
-                {/*   // backgroundSize: fit,*/}
-                {/*}}>*/}
-                    {/*<img src={img} alt=""/>*/}
-                {/*</div>*/}
-                <div className="card_title">
-                    <span>{title}</span>
-                </div>
-                <div className="card_description">
-                    <span>{description}</span>
+
+
+                <div className="card-data">
+
+                    <div className="card-data__description">
+
+                        <div className="card_title">
+                            <span>{title}</span>
+                        </div>
+
+                        <div className="card_description">
+                            <span>{description}</span>
+                        </div>
+
+                        <ul className="card_colors" aria-label="Доступные цвета">
+                            {colors.map((color, index) => (
+                                <li key={index} className="color_dot" style={{backgroundColor: color}}/>
+                            ))}
+                        </ul>
+
+                    </div>
+
+
+                    <div className="car_price">
+                        <span>{price}</span>
+                    </div>
+
                 </div>
 
-                <ul className="card_colors" aria-label="Доступные цвета">
-                    {colors.map((color, index) => (
-                        <li key={index} className="color_dot" style={{backgroundColor: color}}/>
-                    ))}
-                </ul>
-
-                <div className="car_price">
-                    <span>{price}</span>
-                </div>
             </div>
 
         </>
