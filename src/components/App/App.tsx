@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
 import '../../style/index.css';
 import Navigation from "../Navigation/Navigation";
 import Hero from '../Hero/Hero';
@@ -11,7 +11,6 @@ import Footer from '../Footer/Footer';
 export default function App(){
     return(
         <>
-            <Header/>
             <Navigation/>
             <Hero  img="/images/hero.png" button='New In' title='Elegance in simplicity, Earth’s harmony'/>
             <BestSellers title="Best Sellers" />

@@ -5,46 +5,68 @@ import search from '../../../public/images/search.png';
 import profile from '../../../public/images/profile.png';
 import favorite from '../../../public/images/favorite.png';
 import shopping_bag from '../../../public/images/shopping_bag.png'
+import Header from '../../../src/components/Header/Header';
+
+import {useSelector, useDispatch} from "react-redux";
+import {RootState} from '../../store/store';
 
 export default function Navigation(){
+
+    const isOPen = useSelector((state:RootState)=> state.isOpen);
+    const dispatch = useDispatch();
     return(
         <>
-            <div className="navigation">
+            <div className="navMenu">
 
-                <div className="navigation_logo">
-                    <img src={logo} alt=""/>
-                </div>
-                <div className="navigation_list">
-                    <div className="navigation_category">Collection</div>
-                    <div className="navigation_category">New In</div>
-                    <div className="navigation_category">Modiweek</div>
-                    <div className="navigation_category">Plus Size</div>
-                    <div className="navigation_category">Sustainability</div>
-                </div>
+                <Header/>
 
-                <div className="navigation_icons">
-                    <div className="nav_icon">
-                        <button>
-                            <img src={search} alt=""/>
-                        </button>
+
+            <div className={`nav ${isOPen ? 'open' : ''}`}>
+                {/*    <div className='nav'>*/}
+                <button
+                        className="nav__burger-btn"
+                        onClick={() => dispatch({type: "TOGGLE_MENU"})}
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div className="nav__logo">
+                        <img src={logo} alt=""/>
                     </div>
-                    <div className="nav_icon">
-                        <button>
-                            <img src={profile} alt=""/>
-                        </button>
+                    <div className="nav__list">
+                        <div className="nav--category">Collection</div>
+                        <div className="nav--category">New In</div>
+                        <div className="nav--category">Modiweek</div>
+                        <div className="nav--category">Plus Size</div>
+                        <div className="nav--category">Sustainability</div>
                     </div>
-                    <div className="nav_icon">
-                        <button>
-                            <img src={favorite} alt=""/>
-                        </button>
-                    </div>
-                    <div className="nav_icon">
-                        <button>
-                            <img src={shopping_bag} alt=""/>
-                        </button>
+
+                    <div className="navIcon__list">
+                        <div className="nav__icon">
+                            <button>
+                                <img src={search} alt=""/>
+                            </button>
+                        </div>
+                        <div className="nav__icon">
+                            <button>
+                                <img src={profile} alt=""/>
+                            </button>
+                        </div>
+                        <div className="nav__icon">
+                            <button>
+                                <img src={favorite} alt=""/>
+                            </button>
+                        </div>
+                        <div className="nav__icon">
+                            <button>
+                                <img src={shopping_bag} alt=""/>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </>
-    )
-}
+            </>
+            )
+
+            }

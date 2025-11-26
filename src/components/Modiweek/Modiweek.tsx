@@ -26,7 +26,7 @@ export default function Modiweek({title}:ModiweekProps){
 
             <div className="modiweek_gallery">
                 {items.map((item,index)=>(
-                    <Card key={index} {...item}/>
+                    <Card key={index} {...item} fit='cover'/>
                 ))}
             </div>
         </div>

@@ -1,12 +1,92 @@
-.navigation{
-    padding: 1.5vw 7.5vw;
+.navMenu{
+    position: sticky;
+    top:0;
+    z-index: 1;
+    box-sizing: border-box;
 }
-.navigation, .navigation_list, .navigation_icons{
+
+.nav{
+    padding: 1.5vw 7.5vw;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.53);
+}
+.nav, .nav__list, .navIcon__list{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
 }
-.navigation_icons, .navigation_list{
+.navIcon__list, .nav__list{
     gap: 1.5rem;
+}
+.nav__burger-btn{
+    display: none;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+    /*border-radius: 5px;*/
+    z-index: 2;
+
+}
+.nav__burger-btn span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    left: 5px;
+    border-radius: 10px;
+    transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+.nav__burger-btn span:nth-child(1){
+    transform: translateY(-10px);
+}
+.nav__burger-btn span:nth-child(3){
+    transform: translateY(10px);
+}
+
+.nav.open .nav__burger-btn span{
+    background-color: #FFFFFF;
+}
+
+.nav.open .nav__burger-btn span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
+}
+
+.nav.open .nav__burger-btn span:nth-child(2){
+    opacity: 0;
+}
+
+.nav.open .nav__burger-btn span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+@media (max-width: 860px){
+    .nav__list{
+        /*display: none;*/
+        position: absolute;
+        left: -200px;
+        top: 0;
+        width: 200px;
+        flex-direction: column;
+        background-color: #748C70;
+        padding: 100px 20px 20px 20px;
+        z-index: 1;
+        box-sizing: border-box;
+        transition: transform 0.5s;
+        color: #FFFFFF;
+    }
+    .nav__burger-btn{
+        display: block;
+    }
+    .nav--category{
+        display: block;
+        font-size: 21px;
+        padding: 10px 0;
+    }
+    .nav.open .nav__list{
+        transform: translateX(100%);
+    }
+
 }

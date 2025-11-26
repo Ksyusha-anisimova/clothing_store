@@ -22,7 +22,7 @@ export default function BestSellers({title}:BestSellersProps) {
                 <span className="cards_title">{title}</span>
                 <div className="cards_gallery">
                     {items.map((card, index) => (
-                        <Card key={index} {...card}/>
+                        <Card key={index} {...card} fit='cover'/>
                     ))}
                 </div>
             </div>
