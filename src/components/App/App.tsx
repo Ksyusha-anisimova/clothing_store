@@ -1,4 +1,5 @@
 import React from 'react';
+import {Routes, Route} from 'react-router-dom';
 // import Header from '../Header/Header';
 import '../../style/index.css';
 import Navigation from "../Navigation/Navigation";
@@ -12,12 +13,56 @@ export default function App(){
     return(
         <>
             <Navigation/>
-            <Hero  img="/images/hero.png" button='New In' title='Elegance in simplicity, Earth’s harmony'/>
-            <BestSellers title="Best Sellers" />
-            <Collection title="Collection"/>
-            <Modiweek title="Modiweek"/>
-            <Hero  img="/images/cotton.jpg" button='Sustainability' title="Stylish sustainability in clothing promotes eco-friendly choices for a greater future"/>
-            <Follow title="Follow us @modimal"/>
+
+            <Routes>
+                <Route
+                    path='/'
+                    element={
+                    <>
+                        <Hero  img="/images/hero.png" button='New In' title='Elegance in simplicity, Earth’s harmony'/>
+                        <BestSellers title="Best Sellers" />
+                        <Collection title="Collection"/>
+                        <Modiweek title="Modiweek"/>
+                        <Hero  img="/images/cotton.jpg" button='Sustainability' title="Stylish sustainability in clothing promotes eco-friendly choices for a greater future"/>
+                        <Follow title="Follow us @modimal"/>
+                    </>
+                    }
+                />
+
+                <Route
+                    path='/collection'
+                    element={
+                    <>
+                        <Collection title="Collection"/>
+                    </>
+                    }
+                />
+
+                <Route
+                    path='/newIn'
+                    element={
+                    <>
+                    </>
+                    }
+                />
+
+                <Route
+                    path='modiweek'
+                    element={
+                    <>
+                        <Modiweek title="Modiweek"/>
+                    </>
+                    }
+                />
+
+            </Routes>
+
+            {/*<Hero  img="/images/hero.png" button='New In' title='Elegance in simplicity, Earth’s harmony'/>*/}
+            {/*<BestSellers title="Best Sellers" />*/}
+            {/*<Collection title="Collection"/>*/}
+            {/*<Modiweek title="Modiweek"/>*/}
+            {/*<Hero  img="/images/cotton.jpg" button='Sustainability' title="Stylish sustainability in clothing promotes eco-friendly choices for a greater future"/>*/}
+            {/*<Follow title="Follow us @modimal"/>*/}
             <Footer/>
         </>
     )

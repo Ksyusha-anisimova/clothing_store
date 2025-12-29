@@ -20,6 +20,17 @@
 .navIcon__list, .nav__list{
     gap: 1.5rem;
 }
+.nav--category{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+.nav__logo{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
 .nav__burger-btn{
     display: none;
     position: relative;

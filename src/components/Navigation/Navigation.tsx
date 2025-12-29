@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Navigation.css';
 import logo from '../../../public/images/Logo.png';
 import search from '../../../public/images/search.png';
@@ -31,13 +32,31 @@ export default function Navigation(){
                         <span></span>
                         <span></span>
                     </button>
-                    <div className="nav__logo">
+                    <Link to="/" className="nav__logo">
                         <img src={logo} alt=""/>
-                    </div>
+                    </Link>
                     <div className="nav__list">
-                        <div className="nav--category">Collection</div>
-                        <div className="nav--category">New In</div>
-                        <div className="nav--category">Modiweek</div>
+                        <Link
+                            to="/collection"
+                            className="nav--category"
+                            onClick={()=>dispatch({ type: "CLOSE_MENU"})}
+                        >
+                            Collection
+                        </Link>
+                        <Link
+                            to="/newIn"
+                            className="nav--category"
+                            onClick={()=> dispatch({ type: "CLOSE_MENU"})}
+                        >
+                            New In
+                        </Link>
+                        <Link
+                            to='modiWeek'
+                            className="nav--category"
+                            onClick={()=> dispatch({type:"CLOSE_MENU"})}
+                        >
+                            Modiweek
+                        </Link>
                         <div className="nav--category">Plus Size</div>
                         <div className="nav--category">Sustainability</div>
                     </div>
